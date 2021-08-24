@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		about
+	</title>
+	<style type="text/css">
+		.nav{
+			overflow: hidden;
+			background-color: white;
+		}
+		.nav a{
+			text-decoration: none;
+			float: left;
+			padding: 14px 25px;
+			/*color: black;*/
+		}
+		body{
+			background-color:rgb(17, 121, 121);
+			
+		}
+		
+		
+		form{text-align: center;}
+	</style>
+	<script type="text/javascript">
+		function display(){
+			if(document.myform.fname.value == "" || !isNaN(document.myform.fname.value)){
+				alert("First name is required");
+				document.myform.fname.focus();
+				return false;
+			}
+				if(document.myform.mname.value == "" || !isNaN(document.myform.mname.value)){
+				alert("Middle name is required");
+				document.myform.mname.focus();
+				return false;
+			}
+				if(document.myform.sname.value == ""|| !isNaN(document.myform.sname.value)) {
+					alert("Enter valid Surname");
+					document.myform.sname.focus();
+					return false;
+			}
+				if(document.myform.usname.value == "") {
+					alert("Username is required");
+					document.myform.usname.focus();
+					return false;
+			}
+				var strongpass = new RegExp("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{10,})");
+				var passid = document.myform.password.value;
+				var passvalid = strongpass.test(passid);
+			    if(!passvalid){
+					alert("Enter valid password. Password should have atleast 10 characters,uppercase letter and should contain both alphanumeric and special characters");
+					document.myform.password.focus();
+					return false;
+					
+			}
+			if(document.myform.cv.value == "") {
+					alert("cv is required");
+					document.myform.cv.focus();
+					return false;
+			}
+			if(document.myform.email.value == "" ){
+				alert("Enter your email address");
+				document.myform.email.focus();
+				return false;
+			}
+				var emailid= document.myform.email.value;
+					atpos=emailid.indexOf("@");
+					dotpos=emailid.lastIndexOf(".");
+	
+					if(atpos < 1 || (dotpos - atpos) < 2){
+						alert("Enter valid Email Address");
+						document.myform.email.focus();
+						return false;
+			}
+					if(document.myform.mbnumber.value == "") {
+					alert("Enter valid mobile number");
+					document.myform.mbnumber.focus();
+					return false;
+			}
+		}
+	</script>
+</head>
+	<body>
+		<div class="nav">
+			<a href="home.html">HOME</a>
+			<a href="about.html">ABOUT ME</a>
+            <a href="register.html">REGISTER </a>
+            <a href="courses.html">COURSES </a>
+            <a href="mycv.pdf">CV </a>
+			<a href="contact.html">CONTACTS </a>
+		</div>
+        
+		
+		
+	  <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; text-shadow: 2px 2px 5px ; text-align: center;">Registration Form</p>
+		
+		<form onsubmit="return(display())" name="myform" action="regi.php" method="POST">
+			<label>First name:&nbsp&nbsp&nbsp&nbsp</label><input type="text" id="fname" name="fname"><br><br>
+			<label>Middle name:</label><input type="text" id="mname" name="mname"><br><br>
+			<label>Surname:&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" id="sname" name="sname"><br><br>
+			<label>Username:&nbsp&nbsp&nbsp&nbsp</label><input type="text" id="usname" name="usname"><br><br>
+			<label>Password:&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="password"><br><br>
+			<label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCV:&nbsp&nbsp&nbsp&nbsp</label><input type="file"name="cv" ><br><br>
+			<p style="text-align:centre;font-size:20px;"> Contacts</p>
+			<label>Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="email" id="email" name="email"><br><br>
+			<label>Mobile number:</label><input type="text"  name="mbnumber"><br><br>
+	        <label>Facebook:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="fb"><br><br>
+            <label>Twitter:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="twitter"><br><br>
+			<label>Instagram:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="ig"><br><br>
+			<label>Submit button: </label><input type="submit"><br><br>
+			
+		</form>
+         
+        </body>
+        </html>

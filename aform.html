@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+    function display(){
+        if(document.myform.csname.length<=30 || !isNaN(document.myform.csname.value)){
+            alert("Enter valid course name");
+            document.myform.csname.focus();
+            return false;
+        }
+
+        if(document.myform.cscode.value== "" ){
+            alert("Course code is required");
+            document.myform.csname.focus();
+            return false;
+        }
+
+        if(document.myform.csdescription.length<=50 || !isNaN(document.myform.csdescription.value)){
+            alert("Enter valid course description is required");
+            document.myform.csname.focus();
+            return false;
+        }
+
+        if(document.myform.department.value== "" || !isNaN(document.myform.department.value)){
+            alert("Department name is required");
+            document.myform.department.focus();
+            return false;
+        }
+        if(document.myform.semister.value== "" ){
+            alert("semister is required");
+            document.myform.semiister.focus();
+            return false;
+        }
+       
+        if(document.myform.acyear.value== "" || isNaN(document.myform.acyear.value)) {
+            alert("Academic year is required");
+            document.myform.csname.focus();
+            return false;
+        }
+        if(document.myform.csiname.length<=30 || !isNaN(document.myform.csinmae.value)){
+            alert("Instructors name is required");
+            document.myform.csiname.focus();
+            return false;
+        }
+    
+    }
+        </script>
+    </head>
+    <body>
+        <form>
+    <label>Course name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
+    &nbsp;
+    <select name="csname">
+        <option >  </option>
+		<option value="CS151">COMPUTER ORGANIZATION</option>
+		<option value="DS112">DEVELOPMENT PERSPECTIVES II</option>
+		<option value="CL111">COMMUNICATION SKILLS</option>
+		<option value="MT100">FOUNDATION ANALYSIS</option>
+		<option value="IS162">INFORMATION SYSTEMS</option>
+		<option value="CS174">PROGRAMMING IN C</option>
+		<option value="IS158">COMPUTER MAINTENANCE</option>
+		<option value="CS175">JAVA PROGRAMMING</option>
+		<option value="CS173">BUSINESS COMPUTER COMMUNICATION</option>
+		<option value="IS143">DISCRETE STRUCTURES</option>
+		<option value="DS113">DEVELOPMENT PERSPECTIVES II</option>
+		<option value="IS181">WEB PROGRAMMING</option>
+        <option value="IS171">COMPUTER NETWORKS</option>
+		</select>  
+    <label>Course code:&nbsp</label>
+    <select name="cscode">
+        <option > </option>
+		<option value="CS151">CS151</option>
+		<option value="DS112">DS112</option>
+		<option value="CL111">CL111</option>
+		<option value="MT100">MT100</option>
+		<option value="IS162">IS162</option>
+		<option value="CS174">CS174</option>
+		<option value="IS158">IS158</option>
+		<option value="CS175">CS175</option>
+		<option value="CS173">CS173</option>
+		<option value="IS143">IS143</option>
+		<option value="DS113">DS113</option>
+		<option value="IS181">IS181</option>
+        <option value="IS171">IS171</option>
+		</select>  
+    <br><br> 
+    <label>Course description:</label><br><input type="text" name="csdescription"><br><br>  
+    <label>Department:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br><input type="text" name="department"><br><br> 
+    <label>Semister:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+    <select name="semister">
+        <option value="I">I</option>
+		<option value="II">II</option>
+    </select><br><br>
+   
+    <label>Academic year:&nbsp&nbsp&nbsp&nbsp&nbsp</label><br><input type="number" name="acyear"><br><br> 
+    <label>Instructor's name:&nbsp&nbsp</label><br><input type="text" name="csiname"><br><br> 
+    <label>Results:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br><input type="text" name="results"><br><br>   
+        </form>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function display(){
+                if(document.myform.csname.length>30 || !isNaN(document.myform.csname.value)){
+                    alert("Enter valid course name");
+                    document.myform.csname.focus();
+                    return false;
+                }
+        
+                if(document.myform.cscode.value== "" ){
+                    alert("Course code is required");
+                    document.myform.cscode.focus();
+                    return false;
+                }
+        
+                if(document.myform.csdescription.length>50 || !isNaN(document.myform.csdescription.value)){
+                    alert("Enter valid course description");
+                    document.myform.csdescription.focus();
+                    return false;
+                }
+        
+                if(document.myform.department.value== "" || !isNaN(document.myform.department.value)){
+                    alert("Department name is required");
+                    document.myform.department.focus();
+                    return false;
+                }
+                if(document.myform.semister.value== "" ){
+                    alert("semister is required");
+                    document.myform.semiister.focus();
+                    return false;
+                }
+               
+                if(document.myform.acyear.value== "" ) {
+                    alert("Academic year is required");
+                    document.myform.csname.focus();
+                    return false;
+                }
+                if(document.myform.csiname.length>30 || !isNaN(document.myform.csiname.value)){
+                    alert("Instructors name is required");
+                    document.myform.csiname.focus();
+                    return false;
+                }
+                if(document.myform.results.value=="" || !isNaN(document.myform.results.value)){
+                    alert("Enter valid grade ");
+                    document.myform.results.focus();
+                    return false;
+                }
+            }
+                </script>
+    </head>
+    <body style="background-color:rgb(17, 121, 121) ;">
+        <h1 style="text-shadow:2px 2px 5px ;">Course Registration</h1>
+		<form onsubmit="return(display())" name="myform" action="aform.php" method="POST">
+			<label>Course name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
+			&nbsp;
+			<select name="csname">
+				<option >  </option>
+				<option value="COMPUTER ORGANIZATION">COMPUTER ORGANIZATION</option>
+				<option value="DEVELOPMENT PERSPECTIVES I">DEVELOPMENT PERSPECTIVES I</option>
+				<option value="COMMUNICATION SKILLS">COMMUNICATION SKILLS</option>
+				<option value="FOUNDATION ANALYSIS">FOUNDATION ANALYSIS</option>
+				<option value="INFORMATION SYSTEMS">INFORMATION SYSTEMS</option>
+				<option value="PROGRAMMING IN C">PROGRAMMING IN C</option>
+				<option value="COMPUTER MAINTENANCE">COMPUTER MAINTENANCE</option>
+				<option value="JAVA PROGRAMMING">JAVA PROGRAMMING</option>
+				<option value="BUSINESS COMPUTER COMMUNICATION">BUSINESS COMPUTER COMMUNICATION</option>
+				<option value="DISCRETE STRUCTURES">DISCRETE STRUCTURES</option>
+				<option value="DEVELOPMENT PERSPECTIVES II">DEVELOPMENT PERSPECTIVES II</option>
+				<option value="WEB PROGRAMMING">WEB PROGRAMMING</option>
+				<option value="COMPUTER NETWORKS">COMPUTER NETWORKS</option>
+				</select>  
+			<label>Course code:&nbsp</label>
+			<select name="cscode">
+				<option > </option>
+				<option value="CS151">CS151</option>
+				<option value="DS112">DS112</option>
+				<option value="CL111">CL111</option>
+				<option value="MT100">MT100</option>
+				<option value="IS162">IS162</option>
+				<option value="CS174">CS174</option>
+				<option value="IS158">IS158</option>
+				<option value="CS175">CS175</option>
+				<option value="CS173">CS173</option>
+				<option value="IS143">IS143</option>
+				<option value="DS113">DS113</option>
+				<option value="IS181">IS181</option>
+				<option value="IS171">IS171</option>
+				</select>  
+			<br><br> 
+			<label>Course description:</label><br><input type="text" name="csdescription"><br><br>  
+			<label>Department:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br><input type="text" name="department"><br><br> 
+			<label>Semister:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+			<select name="semister">
+				<option > </option>
+				<option value="I">I</option>
+				<option value="II">II</option>
+			</select><br><br>
+		   
+			<label>Academic year:&nbsp&nbsp&nbsp&nbsp&nbsp</label><br><input type="text" name="acyear"><br><br> 
+			<label>Instructor's name:&nbsp&nbsp</label><br><input type="text" name="csiname"><br><br> 
+			<label>Results(grade):&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
+			<select name="results">
+				<option> </option>
+				<option value="A">A</option>
+				<option value="B+">B+</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+				<option value="D">D</option>
+				<option value="E">E</option>
+			</select> <br><br>
+			<label >Submit button: </label><input type="submit"><br><br>
+            
+		</form>
+    </body>
+</html>
